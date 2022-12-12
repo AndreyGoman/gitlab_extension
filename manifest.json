@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Gitlab extension",
+  "version": "0.1.0",
+  "description": "Display your merge requests on main page",
+  "author": "Andrey Goman",
+
+  "content_scripts": [
+    {
+      "css": [ "styles.css" ],
+      "js": ["background.js"],
+      "matches": [
+        "https://gitlab.satellite-soft.ru:2443/"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
