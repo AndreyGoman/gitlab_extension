@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Gitlab extension",
+  "version": "process.env.APP_VERSION",
+  "description": "process.env.DESCRIPTION",
+  "author": "process.env.AUTHOR",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; worker-src 'self' 'wasm-unsafe-eval';"
+  },
+  "content_scripts": [
+    {
+      "matches": ["process.env.GITLAB_URL"],
+      "js": ["process.env.JS_FILE_NAME.js"],
+      "css": ["process.env.CSS_FILE_NAME.css"]
+    }
+  ],
+  "permissions": ["storage"]
+}

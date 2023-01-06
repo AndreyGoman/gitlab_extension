@@ -1,0 +1,130 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden !important;
+}
+
+span[data-testid="comments-icon"] {
+  font-size: 18px;
+}
+
+span[data-testid="branch-icon"] {
+  margin: 0 5px;
+}
+
+a .author {
+  color: #ccc;
+}
+
+a.ref-name {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.merge-request-title-text {
+  letter-spacing: 0.6px;
+}
+
+.merge-request::before {
+  display: inline-block;
+  content: "";
+  width: 44px;
+  height: 44px;
+  background-image: var(--avatar-url);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 2px solid #ccc;
+}
+
+.merge-request.has-conflicts::before {
+  border-color: rgb(255, 152, 0) !important;
+}
+
+.merge-request-title-warning {
+  display: none;
+  cursor: default;
+  color: rgb(255, 152, 0);
+}
+
+.page-title-counter {
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0 0.5rem;
+  vertical-align: super;
+  border-radius: 10rem;
+  font-weight: normal;
+}
+
+.merge-request.has-conflicts .merge-request-title-warning {
+  display: inline-block;
+}
+
+.merge-request.wip .issuable-main-info {
+  opacity: 0.4;
+}
+
+.merge-request.wip:hover .issuable-main-info {
+  opacity: 0.9;
+}
+
+.content-wrapper.content-wrapper-margin {
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+  height: calc(100vh - 40px);
+}
+
+#content-body {
+  overflow: hidden !important;
+  height: calc(100vh - 40px);
+}
+
+main.content ul.content-list {
+  min-height: calc(50vh - 40px - 65px);
+  max-height: calc(50vh - 40px - 65px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.issuable-reviewers {
+  column-gap: 8px;
+}
+
+.issuable-reviewers .author-link {
+  position: relative;
+}
+
+.issuable-reviewers .author-link.approved::before {
+  content: "\2713";
+  display: flex;
+  font-size: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  background: green;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  border-radius: 50%;
+  color: white;
+}
+
+.issuable-reviewers .author-link img {
+  width: 20px;
+  height: 20px;
+}
+
+.issuable-reviewers .author-link.approved img {
+  border: 2px solid green;
+  border-radius: 50%;
+}
+
+.issuable-meta {
+  overflow: visible !important;
+}
