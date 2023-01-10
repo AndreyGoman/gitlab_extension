@@ -12,7 +12,7 @@ function Comments({ value, url }) {
         className="s16 gl-vertical-align-text-bottom"
         data-testid="comments-icon"
       >
-        &#128490;
+        &#128172;
       </span>
       {` ${value}`}
     </a>
